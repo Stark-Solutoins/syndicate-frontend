@@ -24,6 +24,7 @@ export const useAuthStore = create<AuthState>()(
     {
       name: 'syndicate-auth',
       partialize: (state) => ({
+        accessToken: state.accessToken,
         refreshToken: state.refreshToken,
         user: state.user,
       }),
